@@ -1,5 +1,5 @@
 window.addEventListener('scroll', function() {
-    let scroll = document.querySelector('.topo_btn')
+    let scroll = document.querySelector('.topo-btn')
         scroll.classList.toggle('active', window.scrollY > 150)
     })
 function backTop() {

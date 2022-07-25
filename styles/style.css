@@ -2,3 +2,123 @@
   font-family: Brasika;
   src: url(../fonts/Brasika.otf);
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#menu {
+  background-color: #527f68;
+  position: fixed;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.3), 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+#linha {
+  position: relative;
+  display: block;
+  background-color: #d99543;
+  width: 30px;
+  height: 2px;
+  top: 24px;
+  left: 10px;
+  transition: 0.3s ease-in-out;
+}
+#linha:before,
+#linha:after {
+  background-color: #d99543;
+  width: 100%;
+  height: 100%;
+  display: block;
+  content: "";
+  position: absolute;
+  transition: 0.3s ease-in-out;
+}
+#linha:before {
+  top: -10px;
+}
+#linha:after {
+  bottom: -10px;
+}
+#ponto-link {
+  margin-top: 75px;
+}
+#ponto-link a {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+  background-color: #fff;
+  width: 75%;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 0 5px 5px 0;
+  transition: 0.165s;
+  font-size: 20px;
+}
+#ponto-link a:hover {
+  border-right: 5px solid #777;
+  transition: 0.165s;
+}
+.caixa {
+  width: 300px;
+  background: rgba(13, 13, 13, 0.8);
+  height: 100%;
+  left: -300px;
+  position: fixed;
+  transition: all 0.3s linear;
+  z-index: 1;
+}
+input {
+  display: none;
+}
+input:checked ~ label #linha {
+  transform: rotate(45deg);
+}
+input:checked ~ label #linha:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+input:checked ~ label #linha:after {
+  transform: rotate(90deg);
+  bottom: 0;
+}
+#check:checked ~ .caixa {
+  transform: translateX(300px);
+}
+#check:checked ~ label #menu {
+  transform: translateX(210px);
+}
+
+/* Botão para voltar ao topo da página */
+
+.topo-btn {
+  outline: none;
+  border: 0;
+  font-size: 2em;
+  width: 50px;
+  height: 50px;
+  background-color: #527f68;
+  color: #d99543;
+  padding: 8px;
+  border-radius: 10px;
+  right: 20px;
+  bottom: 20px;
+  box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.3), 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  position: fixed;
+  transition: all 0.3s;
+  visibility: hidden;
+  opacity: 0;
+}
+.topo-btn.active {
+  visibility: visible;
+  opacity: 1;
+}
