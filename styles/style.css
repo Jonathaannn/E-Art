@@ -2,11 +2,15 @@
   font-family: Brasika;
   src: url(../fonts/Brasika.otf);
 }
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter-Regular.ttf);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, Helvetica, Arial, sans-serif;
 }
 
 /* Estilo da barra de scroll */
@@ -20,21 +24,21 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #f2d16d;
+  background-color: #463221;
   border-radius: 3px;
 }
 
 /* Menu do site */
 
-.caixa {
+.menu {
   width: 100%;
   background: #fff;
   height: 60px;
   position: fixed;
-  box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0px 5px 2px rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
-.caixa-secundaria {
+.menu-itens {
   width: 100%;
   height: 100%;
   display: flex;
@@ -43,24 +47,22 @@ body::-webkit-scrollbar-thumb {
   flex-direction: row;
   padding: 3px 0 0 0;
 }
-#ponto-image h2 {
+#logo h2 {
   font-family: Brasika;
   font-size: 2rem;
-  color: #d99543;
+  color: #463221;
 }
-#ponto-link a,
-#ponto-social a {
+.itens a {
   text-decoration: none;
-  color: #d99543;
+  color: #463221;
   margin: 0 10px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
-#ponto-link a:hover,
-#ponto-social a:hover {
-  color: #527f68;
+.itens a:hover {
+  color: #e1b26c;
 }
-ion-icon {
+.itens ion-icon {
   padding-right: 10px;
 }
 
@@ -72,13 +74,13 @@ ion-icon {
   font-size: 2em;
   width: 50px;
   height: 50px;
-  background-color: #527f68;
-  color: #d99543;
+  color: #463221;
   padding: 8px;
+  background-color: #f0d1b1;
   border-radius: 10px;
+  box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.3), 0 2px 4px 0 rgba(0, 0, 0, 0.06);
   right: 20px;
   bottom: 20px;
-  box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.3), 0 2px 4px 0 rgba(0, 0, 0, 0.06);
   cursor: pointer;
   position: fixed;
   transition: all 0.3s;
@@ -103,15 +105,15 @@ section {
 
 .template {
   width: 100%;
-  height: 90vh;
-  background: url(../images/temp1.png) #527f68;
-  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.3);
+  height: 83vh;
+  background: url(../images/temp2.png) #527f68;
+  box-shadow: 0 0px 5px 2px rgba(0, 0, 0, 0.3);
 }
 .capa {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(5px);
 }
 .cont-template {
   width: 80%;
@@ -122,26 +124,22 @@ section {
   align-items: center;
 }
 .cont-template h1 {
-  color: #d99543;
+  color: #463221;
   font-family: Brasika;
   font-size: 4rem;
   text-align: center;
   display: inline-block;
   filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
-  transition: all 0.2s ease-in-out;
-}
-.cont-template h1:hover {
-  font-size: 4.5rem;
-  transition: all 0.2s ease-in-out;
+  cursor: default;
 }
 
 /* Corpo conteúdo */
 
-.conteudo {
+.container {
   width: 100%;
   height: 100%;
 }
-.cont-conteudo {
+.conteudo {
   width: 80%;
   margin: 0 auto;
   height: 100%;
@@ -179,25 +177,75 @@ section {
   display: inline-block;
   padding: 10px;
   background-color: #fff;
-  border: 2px solid #527f68;
+  border: 2px solid #463221;
   border-radius: 10px;
-  color: #527f68;
+  color: #463221;
   font-size: 1.1rem;
   transition: all 0.2s ease-in-out;
   font-weight: 600;
   margin-top: 20px;
 }
 .cont-botao:hover {
-  background-color: #527f68;
-  color: #d99543;
+  background-color: #f0d1b1;
+  border: 2px solid #f0d1b1;
   transition: all 0.2s ease-in-out;
 }
-
+.conteudo h2 {
+  font-size: 2em;
+  font-weight: 300;
+  text-align: center;
+  color: #463221;
+}
+.cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  margin: 35px 0 100px 0;
+}
+.card {
+  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  border-radius: 10px;
+  padding: 15px;
+  transition: all ease 0.2s;
+  text-align: center;
+}
+.card:hover {
+  transition: all ease 0.2s;
+  box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.5);
+}
+.card-img {
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5em;
+  background-color: #f0d1b1;
+  color: #463221;
+}
+.card h2 {
+  margin-top: 30px;
+  color: #463221;
+}
+.card p {
+  margin: 20px 0;
+  color: #463221;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+}
 /* Estilo do rodapé do site */
 
 footer {
   width: 100%;
-  background-color: #f2d16d;
+  background-color: #f0d1b1;
   height: 100%;
 }
 .rodape {

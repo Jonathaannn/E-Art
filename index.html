@@ -11,31 +11,38 @@
 
 <body>
 
-    <div class="caixa">
-        <div class="caixa-secundaria">
-            <div id="ponto-image">
+    <!-- Barra de navegação do site -->
+
+    <nav class="menu">
+        <div class="menu-itens">
+            <div id="logo">
                 <h2>E'Art</h2>
             </div>
-            <div id="ponto-link">
+            <div class="itens">
                 <a href="#">
-                    <ion-icon name="home-outline"></ion-icon>Início
+                    Início
                 </a>
-                <a href="#">
-                    <ion-icon name="image-outline"></ion-icon>Quadros
+                <a href="pages/Painting.html">
+                    Quadros
                 </a>
-                <a href="#">
-                    <ion-icon name="shirt-outline"></ion-icon>Camisas
+                <a href="pages/Shirt.html">
+                    Camisas
                 </a>
             </div>
-            <div id="ponto-social">
+            <div class="itens">
                 <a href="https://instagram.com/e_artloja?igshid=YmMyMTA2M2Y" target="_blank">
-                    <ion-icon name="logo-instagram"></ion-icon>@e_artloja
+                    <ion-icon name="logo-instagram"></ion-icon>
                 </a>
             </div>
         </div>
-    </div>
+    </nav>
 
-    <section>
+    <!-- Fim Barra de navegação do site -->
+
+    <section class="container">
+
+        <!-- Template do site -->
+
         <div class="template">
             <div class="capa">
                 <div class="cont-template">
@@ -44,44 +51,57 @@
             </div>
         </div>
 
+        <!-- Fim Template do site -->
+
+        <!-- Conteúdo do site -->
         <div class="conteudo">
-            <div class="cont-conteudo">
-                <div class="cont-bloco">
-                    <div class="cont-img">
-                        <img src="images/logo.png" alt="">
-                    </div>
-                    <div class="cont-text">
-                        <h1>Lorem ipsum dolor sit amet</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis asperiores impedit pariatur
-                            voluptatibus maiores eligendi consequatur possimus ducimus magni accusantium culpa sed illum
-                            esse, officiis earum non eius laborum id?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet rem voluptatem, nulla ullam
-                            quae incidunt numquam! Quae odit voluptates architecto fuga labore quia mollitia
-                            exercitationem
-                            rem eveniet in! Molestias, vitae.</p>
-                        <a href="#" class="cont-botao">Olhar</a>
-                    </div>
+            <h2>Coneça nossos produtos</h2>
+            <div class="cards">
+                <div class="card">
+                    <a href="/pages/Shirt.html">
+                        <div class="card-img">
+                            <ion-icon name="shirt-outline"></ion-icon>
+                        </div>
+                        <h2>Camisas</h2>
+                        <p>Camisas personalizadas ao seu jeito</p>
+                        <a href="/pages/Shirt.html" class="cont-botao">Olhar</a>
+                    </a>
                 </div>
-                <div class="cont-bloco">
-                    <div class="cont-text">
-                        <h1>Lorem ipsum dolor sit amet</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis asperiores impedit pariatur
-                            voluptatibus maiores eligendi consequatur possimus ducimus magni accusantium culpa sed illum
-                            esse, officiis earum non eius laborum id?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet rem voluptatem, nulla ullam
-                            quae incidunt numquam! Quae odit voluptates architecto fuga labore quia mollitia
-                            exercitationem
-                            rem eveniet in! Molestias, vitae.</p>
-                        <a href="#" class="cont-botao">Olhar</a>
-                    </div>
-                    <div class="cont-img">
-                        <img src="images/temp2.png" alt="">
-                    </div>
+                <div class="card">
+                    <a href="/pages/Painting.html">
+                        <div class="card-img">
+                            <ion-icon name="image-outline"></ion-icon>
+                        </div>
+                        <h2>Quadros</h2>
+                        <p>Quadros para você ou para um algém especial</p>
+                        <a href="/pages/Painting.html" class="cont-botao">Olhar</a>
+                    </a>
+                </div>
+            </div>
+
+            <div class="cont-bloco">
+                <div class="cont-img">
+                    <img src="images/logo.jpeg" alt="">
+                </div>
+                <div class="cont-text">
+                    <h1>Lorem ipsum dolor sit amet</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis asperiores impedit pariatur
+                        voluptatibus maiores eligendi consequatur possimus ducimus magni accusantium culpa sed illum
+                        esse, officiis earum non eius laborum id?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet rem voluptatem, nulla ullam
+                        quae incidunt numquam! Quae odit voluptates architecto fuga labore quia mollitia
+                        exercitationem
+                        rem eveniet in! Molestias, vitae.</p>
+                    <a href="#" class="cont-botao">Olhar</a>
                 </div>
             </div>
         </div>
 
     </section>
+
+    <!-- Fim Conteúdo do site -->
+
+    <!-- Rodapé do site -->
 
     <footer>
         <div class="rodape">
@@ -99,10 +119,12 @@
             </div>
         </div>
         <div class="direito">
-            <hr width="100%" color="#527f68">
+            <hr width="100%" color="#463221">
             <p>Copyright © 2022 e_artloja. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <!-- Fim Rodapé do site -->
 
     <button class="topo-btn" onclick="backTop()">
         <ion-icon name="chevron-up-circle-outline"></ion-icon>
